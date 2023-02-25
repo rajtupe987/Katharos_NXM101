@@ -15,7 +15,7 @@ app.use(cors());
 
 app.get("/",(req,res)=>{
     res.send("WELCOME")
-});
+})
 
 
 app.use("/member",userRoute);
