@@ -7,8 +7,11 @@ const cors=require("cors");
 
 
 const {womenRoute}=require("./Routes/women.route")
-
-
+const {sweterRoute}=require("./Routes/TOPS & SWEATERS")
+const {swimmerRoute}=require("./Routes/SWIMWEAR")
+const {sleepRoute}=require("./Routes/SLEEPWEAR")
+const {shoesRoute}=require("./Routes/SHOES & ACCESSORIES.routes")
+const {jacketsRoute}=require("./Routes/COATS & JACKETS");
 const app=express();
 app.use(express.json());
 app.use(cors());
@@ -18,8 +21,17 @@ app.get("/",(req,res)=>{
 })
 
 
+
+
+
+
 app.use("/member",userRoute);
-app.use("/women",womenRoute)
+app.use("/women",womenRoute);
+app.use("/sweter",sweterRoute);
+app.use("/swimwear",swimmerRoute);
+app.use("/sleep",sleepRoute);
+app.use("/shoes",shoesRoute);
+app.use("/jackets",jacketsRoute)
 app.use(authenticate)
 
 // console.log()
